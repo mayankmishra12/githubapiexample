@@ -3,6 +3,10 @@ import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
 import ListItems from './ListItems';
 import FormControl from '@material-ui/core/FormControl';
+
+import Typography from '@material-ui/core/Typography'
+
+import Grid from '@material-ui/core/Grid';
 class Users extends Component {
  constructor(props){
    super(props);
@@ -32,16 +36,38 @@ this.setState({users :userArray});
   } 
   render (){
     let lists = this.state.users;
-    const listItems = lists.map((item) =>
-<li key = {item.login} onClick = {(e)=> {e.preventDefault (); return this.handleclick(item)}}  >
-{item.login}   
-<button onClick = { (e) => {e.stopPropagation(); return this.deleteItem(item)}} value = {item}>delete</button>
-</li>   
+    console.log("list", lists)
+    const listItems = lists.map((item, index) =>
+        // <li key = {item.login} onClick = {(e)=> {e.preventDefault (); return this.handleclick(item)}}  >
+        // {item.login}   
+        // <button onClick = { (e) => {e.stopPropagation(); return this.deleteItem(item)}} value = {item}>delete</button>
+        // </li>   
+
+        <Grid xs={12} key={index}>
+        <div className="history-container">
+        <div className="search-results history-result" key = {item.login}  value ={item.login} onClick = {() =>this.handleclick(item)}>
+          <span>{item.login}</span>
+          <button className="del-btn" onClick = { (e) => {e.stopPropagation(); return this.deleteItem(item)}} value = {item}>delete</button>
+        </div> 
+        </div>
+     </Grid>
    );
    return (
-    <ul>
+    <div className="main-container" >
+    <Grid item xs={12} >
+      <div className="header">
+        <Typography  variant="h4" align='center' style={{color: "#fff"}} gutterBottom>
+            Users Searched History
+        </Typography>
+          <div className="button-box">
+          <button className="header-btn" variant="contained" color="primary" size ="small" onClick={()=>this.props.history.push('/')}>Home</button>
+
+          {/* <button className="header-btn" variant="contained" color="primary" size ="small" onClick={()=>this.props.history.push('/searcheduser')}>Searched History</button> */}
+          </div>
+        </div>
+    </Grid>
     {listItems}
-   </ul>
+    </div>
    )
   }
 }

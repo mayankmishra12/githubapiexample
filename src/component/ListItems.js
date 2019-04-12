@@ -26,11 +26,11 @@ class ListItems extends Component {
         let lists = this.props.lists;
         const listItems = lists.map((item) =>
         
-  <li key = {item.login}  value ={item.login} onClick = {() =>this.handleclick(item)}>{item.login} </li>   
+         <div className="search-results" key = {item.login}  value ={item.login} onClick = {() =>this.handleclick(item)}>{item.login} </div>   
        );
     
         return (
-            <ul>
+            <ul className="ul">
             {listItems}
             </ul>
            

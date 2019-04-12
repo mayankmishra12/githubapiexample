@@ -30,3 +30,128 @@
     transform: rotate(360deg);
   }
 }
+
+.main-container{
+  min-height: 100vh;
+  /* display: flex; */
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+  background-color:#dfe6e9;
+}
+
+.header{
+  background-color: #636e72;
+  min-height: 50px;
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.serach-container{
+  height: 50px;
+  /* background-color: red */
+}
+
+.serach-container{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.search-input{
+  width: 400px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-color: none;
+  border-style: groove;
+  padding: 5px;
+}
+
+.search-btn{
+  width: 102px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: #0984e3;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-box{
+  min-width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+.header-btn{
+  min-width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0px 10px;
+  background-color: #0984e3;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  border-style: groove;
+  border-color: #0984e3;
+  cursor: pointer;
+}
+
+.search-results{
+  height: 40px;
+  width: 70%;
+  border-radius: 5px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #535c68;
+  color: #fff;
+  margin: 10px 0px;
+  box-shadow: 6px 4px 5px 0px rgba(143,130,143,1);
+}
+
+.search-results:hover{
+  transform: scale(1.02);
+}
+
+.history-result:hover{
+  transform: scale(1);
+}
+
+.ul{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.history-result{
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-container{
+  display: flex;
+  justify-content: center;
+}
+
+.del-btn{
+  width: 100px;
+  height: 28px;
+  border-radius: 5px;
+  border-style: initial;
+  background-color: #f5f6fa;
+  font-size: 18px;
+}
+
+.del-btn:hover{
+  transform: scale(1.08);
+}

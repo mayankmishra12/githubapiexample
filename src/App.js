@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import Search from  './component/search';
 import Users from './component/users'
 import UserInfo from './component/UserInfo'
-import RepoInfo from "./component/RepoInfo";
+import RepoInfo from "./component/repo";
 class App extends Component {
   constructor(props) {
     super(props)
@@ -19,18 +19,15 @@ class App extends Component {
       <div>
         <Router>
           <div> 
-          <Typography variant='display1' align='center' gutterBottom>
-        Search the github user's
-      </Typography>
    
-   <Link to = "/">  <Button variant="contained" color="primary" size ="small" >Home</Button>
+   {/* <Link to = "/">  <Button variant="contained" color="primary" size ="small" >Home</Button>
     </Link>
     <Link to = "/searcheduser"> <Button variant="contained" color="primary" size ="small">searcheduser</Button>
-             </Link>
+             </Link> */}
              <Route exact path = "/" component = {Search}/>
-            <Route exact path = "/searcheduser" component = {Users}/>
-            <Route exact path="/searcheduser/:user" component={UserInfo}/>
-            <Route exact path="/repo" component={RepoInfo}/>
+            <Route  exact path = "/searcheduser" component = {Users}/>
+            <Route  exact path="/searcheduser/:user" component={UserInfo}/>
+            <Route  exact path="/repos" component={RepoInfo}/>
           </div>
         </Router>
       </div>
