@@ -12,7 +12,7 @@ class ListItems extends Component {
         localStorage.clear()
         console.log(userArray)
         localStorage.setItem("users",JSON.stringify(userArray)); 
-        history.push("/searcheduser")   
+        history.push(`/searcheduser/${user.login}`)   
 
     }
     componentWillMount (){

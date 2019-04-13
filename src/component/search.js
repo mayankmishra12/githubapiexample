@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography'
 
 import Grid from '@material-ui/core/Grid';
 import '../App.css'
+
+import { connect } from 'react-redux'
 class Search extends Component {
  constructor(){
    super();
@@ -65,8 +67,8 @@ onChange=(event)=>{
      <div className="main-container">
         <Grid item xs={12} >
           <div className="header">
-            <Typography  variant="h4" align='center' style={{color: "#fff"}} gutterBottom>
-                Search the github user's
+            <Typography   variant='display' align='center' style={{color: "#fff"}} gutterBottom className="header-text">
+                Search for github users
             </Typography>
               <div className="button-box">
               <button className="header-btn" variant="contained" color="primary" size ="small" onClick={()=>this.props.history.push('/')}>Home</button>
@@ -90,4 +92,16 @@ onChange=(event)=>{
  }
 }
 
-export default Search
+const mapStateToProps = (state) =>{
+  return{
+    age: state.age
+  }
+}
+
+const mapDispachToProps = (dispach) =>{
+  return{
+    searchUser: () => dispach({type: 'SEARCH_USERS'})
+  }
+}
+
+export default connect(mapStateToProps, mapDispachToProps) (Search);

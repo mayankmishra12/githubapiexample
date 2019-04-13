@@ -27,7 +27,7 @@ class App extends Component {
              <Route exact path = "/" component = {Search}/>
             <Route  exact path = "/searcheduser" component = {Users}/>
             <Route  exact path="/searcheduser/:user" component={UserInfo}/>
-            <Route  exact path="/repos" component={RepoInfo}/>
+            <Route  exact path="/repos/:user/:repo" component={RepoInfo}/>
           </div>
         </Router>
       </div>

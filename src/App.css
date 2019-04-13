@@ -41,12 +41,14 @@
 }
 
 .header{
-  background-color: #636e72;
+  background-color: #222f3e;
   min-height: 50px;
   color: #fff;
 
   display: flex;
   justify-content: space-between;
+  /* display: flex; */
+  align-items: center;
   padding: 0px 20px;
 }
 
@@ -95,13 +97,17 @@
   height: 40px;
   border-radius: 5px;
   margin: 0px 10px;
-  background-color: #0984e3;
+  background-color: inherit;
   color: #fff;
   font-size: 16px;
   outline: none;
   border-style: groove;
-  border-color: #0984e3;
+  border-color: #222f3e;
   cursor: pointer;
+}
+
+.header-btn:hover{
+  background-color: #485667;
 }
 
 .search-results{
@@ -154,4 +160,8 @@
 
 .del-btn:hover{
   transform: scale(1.08);
+}
+
+.header-text{
+  font-size: 22px
 }

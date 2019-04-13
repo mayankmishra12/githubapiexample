@@ -56,7 +56,7 @@ this.setState({users :userArray});
     <div className="main-container" >
     <Grid item xs={12} >
       <div className="header">
-        <Typography  variant="h4" align='center' style={{color: "#fff"}} gutterBottom>
+        <Typography align='center' style={{color: "#fff"}} gutterBottom className="header-text">
             Users Searched History
         </Typography>
           <div className="button-box">
