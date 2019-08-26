@@ -24,7 +24,7 @@ class App extends Component {
     </Link>
     <Link to = "/searcheduser"> <Button variant="contained" color="primary" size ="small">searcheduser</Button>
              </Link> */}
-             <Route exact path = "/" component = {Search}/>
+             <Route exact path = "/search" component = {Search}/>
             <Route  exact path = "/searcheduser" component = {Users}/>
             <Route  exact path="/searcheduser/:user" component={UserInfo}/>
             <Route  exact path="/repos/:user/:repo" component={RepoInfo}/>
